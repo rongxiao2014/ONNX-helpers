@@ -5,4 +5,4 @@ Change the weights for a given onnx model and save into a new onnx file
 * read_onnx.py\
 Get a dictionary of weights from an onnx file
 * check_compatibility.py\
-Check if two onnx files have the underlying computational graph and operators
+Check if two onnx files have the same underlying computational graph and operators
