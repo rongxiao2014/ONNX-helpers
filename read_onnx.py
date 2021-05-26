@@ -9,6 +9,3 @@ def onnx2dic(onnx_file):
     for weight in model.graph.initializer:
         dic[weight.name] = numpy_helper.to_array(weight)
     return dic
-
-
-print(onnx2dic(model))
