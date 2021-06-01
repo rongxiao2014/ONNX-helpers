@@ -20,6 +20,6 @@ def updateonnxlayer(layer_name, weight_numpy, onnx_file, new_onnx_file):
     new_weight = onnx.numpy_helper.from_array(weight_numpy)
     model = onnx.load(onnx_file)
     for weight in model.graph.initializer:
-        if(weight.name == layer_name):
+        if weight.name == layer_name:
             weight.raw_data = new_weight.raw_data
     onnx.save(model, new_onnx_file)
