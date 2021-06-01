@@ -7,11 +7,11 @@ import numpy as np
 def check_model(onnx_A, onnx_B):
     model_A = onnx.load(onnx_A)
     model_B = onnx.load(onnx_B)
-    if(model_A.graph.input != model_B.graph.input):
+    if model_A.graph.input != model_B.graph.input:
         return False
-    elif(model_A.graph.output != model_B.graph.output):
+    elif model_A.graph.output != model_B.graph.output:
         return False
-    elif(model_A.graph.node != model_B.graph.node):
+    elif model_A.graph.node != model_B.graph.node:
         return False
     else:
         return True
